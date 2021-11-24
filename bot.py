@@ -25,8 +25,8 @@ async def start(event):
     link_preview=False,
     buttons=(
       [
-        Button.url('📣 Channel', 'https://t.me/harp_tech'),
-        Button.url('📦 Source', 'https://github.com/AnjanaMadu/MentionAllBot')
+        Button.url('📣 Channel', 'https://t.me/tamilBots'),
+        Button.url('📦 Source', 'https://t.me/TamilSupport')
       ]
     )
   )
@@ -39,13 +39,13 @@ async def help(event):
     link_preview=False,
     buttons=(
       [
-        Button.url('📣 Channel', 'https://t.me/harp_tech'),
-        Button.url('📦 Source', 'https://github.com/AnjanaMadu/MentionAllBot')
+        Button.url('📣 Channel', 'https://t.me/tamilbots'),
+        Button.url('📦 Source', 'https://t.me/tamilsupport')
       ]
     )
   )
   
-@client.on(events.NewMessage(pattern="^/mentionall ?(.*)"))
+@client.on(events.NewMessage(pattern="^/all ?(.*)"))
 async def mentionall(event):
   chat_id = event.chat_id
   if event.is_private:
