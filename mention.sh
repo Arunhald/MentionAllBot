@@ -1,3 +1,3 @@
 git clone https://github.com/ImSaravanakrish/MentionAllBot
-cd bot.py
+cd mentionallbot
 python3 -m MentionAllBot
