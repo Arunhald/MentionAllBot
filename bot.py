@@ -87,12 +87,12 @@ async def mentionall(event):
     return await event.respond("__Reply to a message or give me some text to mention others!__")
   
   spam_chats.append(chat_id)
-  usrnum = 0
+  usrnum = 10
   usrtxt = ''
   async for usr in client.iter_participants(chat_id):
     if not chat_id in spam_chats:
       break
-    usrnum += 1
+    usrnum += 10
     usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
     if usrnum == 100:
       if mode == "text_on_cmd":
@@ -101,7 +101,7 @@ async def mentionall(event):
       elif mode == "text_on_reply":
         await msg.reply(usrtxt)
       await asyncio.sleep(2)
-      usrnum = 0
+      usrnum =1
       usrtxt = ''
   try:
     spam_chats.remove(chat_id)
