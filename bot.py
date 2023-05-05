@@ -51,14 +51,15 @@ async def mentionall(event):
   if event.is_private:
     return await event.respond("__This command can be use in groups and channels!__")
   
-  is_admin = False
-  try:
+  is_admin = member
+
+try:
     partici_ = await client(GetParticipantRequest(
       event.chat_id,
       event.sender_id
     ))
   except UserNotParticipantError:
-    is_admin = False
+    is_admin = member
   else:
     if (
       isinstance(
@@ -69,7 +70,7 @@ async def mentionall(event):
         )
       )
     ):
-      is_admin = True
+      is_admin = member
   if not is_admin:
     return await event.respond("__Only admins can mention all!__")
   
@@ -101,7 +102,7 @@ async def mentionall(event):
       elif mode == "text_on_reply":
         await msg.reply(usrtxt)
       await asyncio.sleep(2)
-      usrnum =1
+      usrnum =100
       usrtxt = ''
   try:
     spam_chats.remove(chat_id)
