@@ -25,8 +25,8 @@ async def start(event):
     link_preview=False,
     buttons=(
       [
-        Button.url('📣 Channel', 'https://t.me/tamilBots'),
-        Button.url('📦 Source', 'https://t.me/TamilSupport')
+        Button.url('📣 Channel', 'https://t.me/smart_aruney_143'),
+        Button.url('📦 Source', 'https://t.me/Tamilchat_tgk')
       ]
     )
   )
@@ -39,8 +39,8 @@ async def help(event):
     link_preview=False,
     buttons=(
       [
-        Button.url('📣 Channel', 'https://t.me/tamilbots'),
-        Button.url('📦 Source', 'https://t.me/tamilsupport')
+        Button.url('📣 Channel', 'https://t.me/smart_aruney_143'),
+        Button.url('📦 Source', 'https://t.me/tamilchat_Tgk')
       ]
     )
   )
@@ -94,7 +94,7 @@ async def mentionall(event):
       break
     usrnum += 1
     usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
-    if usrnum == 5:
+    if usrnum == 100:
       if mode == "text_on_cmd":
         txt = f"{usrtxt}\n\n{msg}"
         await client.send_message(chat_id, txt)
